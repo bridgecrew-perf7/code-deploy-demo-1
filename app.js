@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.port | 3001
 
 app.get("/", function(req, res){
-  res.status(200).send("BITBUCKET-->EC2CODEDEPLOY!");
+  res.status(200).send("BITBUCKET-->EC2CODEDEPLOY! - test01");
 });
 
 app.listen(port,()=>{
