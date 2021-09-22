@@ -1,4 +1,3 @@
 #!/bin/bash
-# Stop all servers and start the server
-forever stopall
+# Start the server
 forever start /home/ubuntu/my-app1/app.js
