@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.port | 3001
 
 app.get("/", function(req, res){
-  res.status(200).send("cd-ec2-1 IAM Bug Fix and Running! - fixed01");
+  res.status(200).send("cd-ec2-1 IAM Bug Fix and Running! - fixed02");
 });
 
 app.listen(port,()=>{
