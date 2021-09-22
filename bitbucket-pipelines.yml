@@ -18,7 +18,7 @@ pipelines:
               S3_BUCKET: $S3_BUCKET
               COMMAND: 'upload'
               ZIP_FILE: 'application.zip'
-              VERSION_LABEL: 'my-app-1.0.0'
+              VERSION_LABEL: 'main-app'
           - pipe: atlassian/aws-code-deploy:0.2.5
             variables:
               AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
@@ -29,7 +29,7 @@ pipelines:
               S3_BUCKET: $S3_BUCKET
               COMMAND: 'deploy'
               WAIT: 'true'
-              VERSION_LABEL: 'my-app-1.0.0'
+              VERSION_LABEL: 'main-app'
               IGNORE_APPLICATION_STOP_FAILURES: 'true'
               FILE_EXISTS_BEHAVIOR: 'OVERWRITE'
   branches:
@@ -50,7 +50,7 @@ pipelines:
                 S3_BUCKET: $S3_BUCKET
                 COMMAND: 'upload'
                 ZIP_FILE: 'application.zip'
-#                VERSION_LABEL: 'my-app-1.0.0'
+                VERSION_LABEL: 'test-app'
             - pipe: atlassian/aws-code-deploy:0.2.5
               variables:
                 AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
@@ -61,6 +61,6 @@ pipelines:
                 S3_BUCKET: $S3_BUCKET
                 COMMAND: 'deploy'
                 WAIT: 'true'
-#                VERSION_LABEL: 'my-app-1.0.0'
+                VERSION_LABEL: 'test-app'
                 IGNORE_APPLICATION_STOP_FAILURES: 'true'
                 FILE_EXISTS_BEHAVIOR: 'OVERWRITE'
